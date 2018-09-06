@@ -1,0 +1,29 @@
+body {
+	margin-left: 2cm;
+}
+
+h1 {
+	font-family: TimesNewRoman;
+	font-weight: bolder;
+	font-size: 10pt;
+}
+
+table {
+	margin: 2cm;
+}
+
+td {
+	padding-left: 10mm;
+	padding-right: 10mm;
+	font-family: TimesNewRoman;
+	font-size: 10pt;
+	border: solid thin black;
+	background-color: black;
+	color: white;
+	padding: 1mm;
+}
+
+a{
+	
+	color: white;
+}

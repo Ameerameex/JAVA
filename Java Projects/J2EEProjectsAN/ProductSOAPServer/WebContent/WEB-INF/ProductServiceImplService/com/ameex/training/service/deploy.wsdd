@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ProductServiceImplService WSDL service -->
+
+  <service name="ProductServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.training.ameex.com"/>
+      <parameter name="wsdlServiceElement" value="ProductServiceImplService"/>
+      <parameter name="schemaQualified" value="http://service.training.ameex.com,http://business.training.ameex.com"/>
+      <parameter name="wsdlServicePort" value="ProductServiceImpl"/>
+      <parameter name="className" value="com.ameex.training.service.ProductServiceImpl"/>
+      <parameter name="wsdlPortType" value="ProductServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.training.ameex.com" xmlns:retNS="http://service.training.ameex.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addProduct" qname="operNS:addProduct" returnQName="retNS:addProductReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.training.ameex.com" xmlns:tns="http://business.training.ameex.com" qname="pns:product" type="tns:Product"/>
+      </operation>
+      <operation xmlns:operNS="http://service.training.ameex.com" xmlns:retNS="http://service.training.ameex.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="deleteProduct" qname="operNS:deleteProduct" returnQName="retNS:deleteProductReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.training.ameex.com" xmlns:tns="http://business.training.ameex.com" qname="pns:product" type="tns:Product"/>
+      </operation>
+      <operation xmlns:operNS="http://service.training.ameex.com" xmlns:retNS="http://service.training.ameex.com" xmlns:rtns="http://business.training.ameex.com" name="findProduct" qname="operNS:findProduct" returnQName="retNS:findProductReturn" returnType="rtns:Product" soapAction="">
+        <parameter xmlns:pns="http://service.training.ameex.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://service.training.ameex.com" xmlns:retNS="http://service.training.ameex.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="updateProduct" qname="operNS:updateProduct" returnQName="retNS:updateProductReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://service.training.ameex.com" xmlns:tns="http://business.training.ameex.com" qname="pns:product" type="tns:Product"/>
+      </operation>
+      <parameter name="allowedMethods" value="findProduct addProduct updateProduct deleteProduct"/>
+
+      <typeMapping xmlns:ns="http://business.training.ameex.com" qname="ns:Product" type="java:com.ameex.training.business.Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

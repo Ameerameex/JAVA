@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		int number;
+		System.out.print("Enter Number : ");
+		number = scanner.nextInt();
+
+		
+		boolean isDivsibleByOtherNumbers = false;
+
+		int i = 2;
+		while (i <= number - 1) {
+			int remainder=number%i;
+			if(remainder==0){
+				isDivsibleByOtherNumbers=true;
+				break;
+			}
+			i++;
+		}
+		
+		if(isDivsibleByOtherNumbers==false)
+			System.out.println(number + " is a Prime Number");
+		else
+			System.out.println(number + " is not a Prime Number");
+	}
+
+}

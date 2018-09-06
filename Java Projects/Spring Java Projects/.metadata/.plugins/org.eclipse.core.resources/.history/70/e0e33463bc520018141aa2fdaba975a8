@@ -1,0 +1,57 @@
+package com.training.ui;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.business.A;
+import com.training.business.B;
+import com.training.business.C;
+import com.training.business.Employee;
+import com.training.business.FilmActor;
+import com.training.business.IPLTeam;
+import com.training.business.IPLTournament;
+import com.training.business.IPLVenues;
+import com.training.business.SaleItem;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans1.xml");
+C c=(C) context.getBean("cBean");
+
+	System.out.println(c);
+	
+	    Integer integer=(Integer) context.getBean("startYearBean");
+	     System.out.println(integer);
+	
+	System.out.println(context.getBean("profitBean"));
+	
+//Thread thread=(Thread) context.getBean("t1");
+//thread.start();
+	SaleItem item=(SaleItem) context.getBean("saleBean");
+	
+	System.out.println(item);
+	
+	FilmActor actor=(FilmActor) context.getBean("filmActorBean");
+	
+	System.out.println(actor);
+	IPLVenues iplVenues=(IPLVenues) context.getBean("iplVenuesBean1");
+	
+	System.out.println(iplVenues);
+	IPLVenues iplVenues1=(IPLVenues) context.getBean("iplVenuesBean");
+	
+	System.out.println(iplVenues1);
+	IPLTeam iplTeam=(IPLTeam) context.getBean("iplTeamBean");
+	
+	System.out.println(iplTeam);
+	
+	IPLTournament  iplTournament=(IPLTournament) context.getBean("iplTouranamentBean");
+	
+	System.out.println(iplTournament);
+	
+	
+	
+	}
+
+}

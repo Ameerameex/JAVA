@@ -1,0 +1,12 @@
+package com.training.example.ui;
+
+public class Main5 {
+
+	public static void main(String[] args) {
+		
+Thread thread=new ApolloPrintingThread();
+
+thread.start();
+	}
+
+}

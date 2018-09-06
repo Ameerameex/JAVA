@@ -1,0 +1,108 @@
+package com.ameex.training.db;
+
+import java.net.ConnectException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ameex.training.business.Customer;
+
+public class MySQLCustomerDAOImpl implements CustomerDAO,MySQLCustomerQueries {
+
+	@Override
+	public boolean addCustomer(Customer customer) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(INSERT_QUERY);
+		statement.setInt(1, customer.getId());
+		statement.setString(2, customer.getName());
+		statement.setDouble(3, customer.getPrice());
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public boolean deleteCustomer(Customer customer) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(DELETE_QUERY);
+		statement.setInt(1, customer.getId());
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public boolean updateCustomer(Customer customer) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(UPDATE_QUERY);
+		
+		statement.setString(1, customer.getName());
+		statement.setDouble(2, customer.getPrice());
+		statement.setInt(3, customer.getId());
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public Customer findCustomer(int id) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(FIND_ONE_QUERY);
+		statement.setInt(1,id);
+		ResultSet resultSet=statement.executeQuery();
+
+		if(resultSet.next()){
+			Customer customer=new Customer();
+			int i=resultSet.getInt(1);
+			String j=resultSet.getString(2);
+			double k=resultSet.getDouble(3);
+			customer.setId(i);
+			customer.setName(j);
+			customer.setPrice(k);
+			return customer;
+		}
+		
+		ConnectionManager.closeConnection(connection);
+
+		return null;
+	}
+
+	@Override
+	public List<Customer> getAllCustomers() throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(FIND_ALL_QUERY);
+		List<Customer> allCustomers=new ArrayList<>();
+		ResultSet resultSet=statement.executeQuery();
+
+		while(resultSet.next()){
+			Customer customer=new Customer();
+			int i=resultSet.getInt(1);
+			String j=resultSet.getString(2);
+			double k=resultSet.getDouble(3);
+			customer.setId(i);
+			customer.setName(j);
+			customer.setPrice(k);
+			allCustomers.add(customer);
+		}
+		ConnectionManager.closeConnection(connection);
+
+		return allCustomers;
+	}
+
+}

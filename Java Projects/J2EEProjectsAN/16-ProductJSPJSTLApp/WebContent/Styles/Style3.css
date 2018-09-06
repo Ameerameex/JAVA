@@ -1,0 +1,31 @@
+body{
+	margin:5cm;
+	margin-bottom:4cm;
+	background-image:url("../images/Texture/images25.jpg");
+}
+table,td{
+		
+	
+	border: solid thin black;;
+	border-collapse: collapse;
+	margin: 1cm;
+	height:40%;
+}
+td{
+	height: 15mm;
+	padding:3mm;
+	
+}
+td.caption{
+	background-color: white;;
+	
+	
+}
+td.data{
+	background-color: white;
+	font-weight: bolder;
+	font-family:verdana;
+	color:maroon;
+	font-size: large;
+	
+}

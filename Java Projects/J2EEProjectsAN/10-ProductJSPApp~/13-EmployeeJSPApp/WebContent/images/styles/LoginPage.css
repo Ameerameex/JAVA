@@ -1,0 +1,54 @@
+
+
+table {
+	color: black;
+	margin-left: 24cm;
+	margin-top: 3cm;
+	background-color: grey;
+	border: solid thick black;
+	width: 30%
+	}
+input[type='submit']{
+margin-right: 6mm;
+background-color: rgb(53,211,123);
+height: 8mm;
+width: 4cm;
+border-radius: 3mm;
+box-shadow: 3px 3px white;
+}
+input[type='reset']{
+margin-right: 6mm;
+background-color: rgb(53,211,123);
+height: 8mm;
+width: 4cm;
+border-radius: 3mm;
+box-shadow: 3px 3px white;
+}
+#image{
+height: 20%;
+width: 10%;
+margin-top: 10px;
+
+}
+
+#login{
+background-color: brown;
+height:15mm;
+width: 20mm;
+text-transform: uppercase;
+font-weight: bolder;
+
+
+}
+
+#user{
+color: white;
+padding: 10px;
+
+}
+#password{
+color: white;
+padding: 10px;
+
+
+}

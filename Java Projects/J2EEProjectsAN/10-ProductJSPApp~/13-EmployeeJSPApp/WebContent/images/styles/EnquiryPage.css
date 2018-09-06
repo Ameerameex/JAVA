@@ -1,0 +1,48 @@
+table{
+color:black;
+background-color:#577731;
+padding: 0.5cm;
+border-radius: 2mm;
+margin-left: 12cm;
+margin-top: 3cm;
+
+}
+#title{
+font-weight: bolder;
+background-color: #c8d079;
+width: 50mm;
+height: 10mm;
+text-transform: uppercase;
+border-radius: 3mm;
+
+}
+#name{
+color:white;
+padding: 3mm;
+
+
+}
+#phone{
+color:white;
+padding: 3mm;
+
+}
+
+#mail{
+color:white;
+padding: 3mm;
+
+}
+#enquiry{
+color:white;
+padding: 3mm;
+
+}
+input[type='submit']{
+margin-right: 6mm;
+background-color: rgb(53,211,123);
+height: 8mm;
+width: 4cm;
+border-radius: 3mm;
+box-shadow: 3px 3px white;
+}

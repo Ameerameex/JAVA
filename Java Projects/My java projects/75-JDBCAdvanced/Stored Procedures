@@ -1,0 +1,6 @@
+DELIMITER //
+ 
+CREATE PROCEDURE display1()
+BEGIN
+    SELECT * from product;
+END//

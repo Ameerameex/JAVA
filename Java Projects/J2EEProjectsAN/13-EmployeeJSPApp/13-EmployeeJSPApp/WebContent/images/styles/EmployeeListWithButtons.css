@@ -1,0 +1,26 @@
+table {
+	margin-left: 8cm;
+	margin-right: 8cm;
+	background-image: url("images5.jpg");
+}
+
+#title {
+	height: 5mm;
+	width: 5mm;
+	background-color: yellow;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+input {
+	width: 2cm;
+}
+#genderimg{
+ width:40px;
+  height:35px;
+
+}
+
+body {
+	background-image: url("images17.jpg");
+}

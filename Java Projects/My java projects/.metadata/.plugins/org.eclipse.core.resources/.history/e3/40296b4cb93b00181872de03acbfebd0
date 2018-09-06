@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		
+		Scanner scanner = new Scanner(System.in);
+
+		
+		double interestAmount,totalRepaybleAmount,EMI;
+
+		double loanAmount1;
+		int loanTenure1;
+		
+		System.out.print("Enter Loan Amount    : ");
+		loanAmount1=scanner.nextDouble();
+		System.out.print("Enter Loan Period    : ");
+		loanTenure1=scanner.nextInt();
+		
+		interestAmount=loanAmount1*12.0/100.0;
+		totalRepaybleAmount=loanAmount1+interestAmount;
+		EMI=totalRepaybleAmount/loanTenure1;
+		
+		System.out.println("Loan Amount               : " + loanAmount1);
+		System.out.println("Loan Duration             : " + loanTenure1);
+		System.out.println("Loan Interest Rate        : " + (12.0/100.0));
+		System.out.println("Repayable Amount	      : " + totalRepaybleAmount);
+		System.out.println("EMI					      : " + EMI);
+		
+		
+		
+		
+
+	}
+
+}

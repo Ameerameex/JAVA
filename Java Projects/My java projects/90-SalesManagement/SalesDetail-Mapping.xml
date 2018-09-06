@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="com.training.sales.business.SalesDetail" tableName="SALESTABLE">
+<property name="salesDate" type="DATE" columnName="sal_Date"></property>
+<property name="salesAmount" type="DOUBLE" columnName="sal_amount"></property>
+<property name="salesProductName" type="STRING" columnName="sal_product"></property>
+<idProperty name="salesManName" type="STRING" columnName="sal_name"></idProperty>
+</class>

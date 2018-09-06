@@ -1,0 +1,22 @@
+package com.training.ui;
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.business.Circle;
+
+public class Main5 {
+	
+	
+  public static void main(String[] args) throws ClassNotFoundException {
+	Class.forName("com.mysql.jdbc.Driver");
+	  ApplicationContext appletContext=new ClassPathXmlApplicationContext("beans4.xml");
+	  
+	  System.out.println(appletContext.getBean("dbConnection"));
+	  
+	 
+
+	  
+}
+}

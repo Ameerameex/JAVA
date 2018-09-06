@@ -1,0 +1,13 @@
+package com.training.example.ui;
+
+public class Main5 {
+
+	public static void main(String[] args) {
+
+		ApolloPrintingTask apolloPrintingTask = new ApolloPrintingTask();
+		Thread thread, thread2;
+        thread=new Thread(apolloPrintingTask);
+        
+	}
+
+}

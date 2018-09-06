@@ -1,0 +1,1 @@
+create table ContactInfo(id int Auto_increment,email varchar(20),phone varchar(20),cId int,primary key(id),FOREIGN KEY(cId) REFERENCES Customer(id));

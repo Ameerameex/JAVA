@@ -1,0 +1,75 @@
+body {
+	margin-left: 2cm;
+	margin-top: 3cm;
+}
+
+h1 {
+	text-align: center; height : 1cm;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: verdana;
+	font-size: 12pt;
+	font-weight: bolder;
+	width: 50%;
+	height: 1cm;
+}
+
+h2 {
+	text-align: center;
+	height: 1cm;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: verdana;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+td {
+	height: 12mm;
+	font-family: verdana;
+	font-size: 10pt;
+}
+
+input[type='submit'] {
+	height: 10mm;
+	width: 5cm;
+	background-color: green;;
+	color: white;;
+	font-family: verdana;
+	font-weight: bold;
+	border-radius: 3mm;
+	background-color: green;
+}
+
+input[type='reset'] {
+	height: 10mm;
+	width: 5cm;
+	background-color: green;;
+	color: white;;
+	font-family: verdana;
+	font-weight: bold;
+	border-radius: 3mm;
+}
+
+input[type='text'] {
+	border-left: none;;
+	border-top: none;;
+	border-right: none;;
+	border-bottom: solid thin green;
+}
+
+select {
+	width: 5cm;
+	border-left: none;;
+	border-top: none;;
+	border-right: none;;
+	border-bottom: solid thin green;
+	border-left: none;
+}
+input,select {
+	
+	outline:0;
+	
+}

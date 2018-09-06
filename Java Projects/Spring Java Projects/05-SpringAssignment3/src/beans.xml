@@ -1,0 +1,59 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="companyBean"
+		class="com.training.assignment.business.Company">
+		<property name="name" value="Ameex"></property>
+		<property name="expansionYears">
+
+			<list>
+				<value>2010</value>
+				<value>2011</value>
+				<value>2012</value>
+				<value>2013</value>
+				<value>2014</value>
+			</list>
+		</property>
+		<property name="directorNames">
+
+			<list>
+				<value>Mr.Suriya</value>
+				<value>Mr.Madhan</value>
+				<value>Mr.Balaji</value>
+				<value>Mr.Hari</value>
+				<value>Mr.Ashish</value>
+			</list>
+		</property>
+		<property name="branchLocations">
+
+			<set>
+				<value>Chennai</value>
+				<value>Mumbai</value>
+				<value>Lahore</value>
+				<value>Indonesia</value>
+				<value>Bopal</value>
+			</set>
+		</property>
+<property name="lastTenYearsProfit">
+
+			<map>
+				<entry  key="2011" value="10000000"></entry>
+				<entry  key="2012" value="20000000"></entry>
+				<entry  key="2013" value="30000000"></entry>
+				<entry  key="2014" value="40000000"></entry>
+				<entry  key="2015" value="50000000"></entry>
+			</map>
+		</property>
+
+
+
+
+
+	</bean>
+
+
+
+</beans>

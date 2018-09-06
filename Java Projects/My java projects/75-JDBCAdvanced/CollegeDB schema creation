@@ -1,0 +1,39 @@
+create database collgedb;
+
+use collegedb;
+
+create table Department
+(
+
+);
+
+create table Student
+(
+
+);
+
+create table semester1Marks
+(
+
+);
+
+create table semester2Marks
+(
+
+);
+
+create table semester3Marks
+(
+
+);
+
+create table semester4Marks
+(
+
+);
+
+insert into department values();
+
+insert into department student();
+
+insert into department semeseter1();

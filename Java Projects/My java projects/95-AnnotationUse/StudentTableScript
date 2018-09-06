@@ -1,0 +1,7 @@
+create table student(
+sid int,
+sname varchar(20),
+saverage double,
+sgrade char,
+sdateofjoining date,
+primary key(rollnumber));

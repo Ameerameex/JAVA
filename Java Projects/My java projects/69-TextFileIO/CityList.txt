@@ -1,0 +1,10 @@
+chennai
+madurai
+trichy
+bangalore
+mumbai
+kolkata
+hyderabad
+rajasthan
+delhi
+punjab

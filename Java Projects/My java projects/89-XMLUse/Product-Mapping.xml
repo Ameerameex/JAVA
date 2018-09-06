@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="com.example.training.business.Product"  tableName="PRODUCT">
+
+<property name="name" columnName="NAME" type="STRING"></property>
+<property name="price" columnName="PRICE" type="DOUBLE"></property>
+<property name="category" columnName="CATEGORY" type="CHAR"></property>
+<property name="manufacturedDate" columnName="MDate" type="DATE"></property>
+
+<idProperty name="id" columnName="ID" type="INT"></idProperty>
+
+
+</class>

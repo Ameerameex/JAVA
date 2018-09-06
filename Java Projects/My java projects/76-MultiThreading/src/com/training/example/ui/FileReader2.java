@@ -1,0 +1,56 @@
+package com.training.example.ui;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+public class FileReader2 {
+
+	public static void main(String[] args) {
+		File file = new File("oxygen.txt");
+		try {
+			InputStream in = new FileInputStream(file);
+			Reader reader = new InputStreamReader(in);
+			StringBuffer buffer = new StringBuffer();
+			int linecount = 0;
+			int wordcount = 0;
+			int charcount = 0;
+			while (true) {
+				int i = reader.read();
+				if (i == -1) {
+					break;
+				}
+
+				char ch = (char) i;
+				buffer.append(ch);
+				charcount++;
+				if (ch == ' ') {
+					wordcount++;
+				}
+				if (ch == '\n') {
+					linecount++;
+					String line = buffer.toString();
+					System.out.print(line);
+					buffer = new StringBuffer();
+				}
+			}
+			System.out.println("[ File Summary : "+ "oxygen.txt "+ "]");
+			System.out.println("[ Total Characters found in the File : " + charcount + " ]");
+			System.out.println("[ Total Words found in the File : " + wordcount + " ]");
+			System.out.println("[ Total Lines found in the File : " + linecount + " ]");
+			reader.close();
+			in.close();
+
+		} catch (FileNotFoundException e) {
+			System.out.println("The specified File 'oxygen.txt' not not found...");
+		} catch (IOException e) {
+			System.out.println("Error while reading the content from file ...");
+		}
+
+	}
+
+}

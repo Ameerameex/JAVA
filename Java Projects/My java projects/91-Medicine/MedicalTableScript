@@ -1,0 +1,7 @@
+create table medicine(
+batchNo int,
+name varchar(25),
+stockQTY int,
+price double,
+expiry date,
+primary key(batchNo));

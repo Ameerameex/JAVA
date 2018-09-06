@@ -1,0 +1,1 @@
+create table product(id int,name varchar(25),price double,mdate Date,category char,primary key(id));

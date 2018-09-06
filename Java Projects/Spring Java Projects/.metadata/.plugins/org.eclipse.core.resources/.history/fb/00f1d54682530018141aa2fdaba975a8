@@ -1,0 +1,69 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="player1" class="com.training.business.Player" scope="prototype">
+
+		<property name="name" value="Dhoni"></property>
+		<property name="age" value="35"></property>
+		<property name="runsScored" value="95"></property>
+		<property name="wicketsTaken" value="4"></property>
+		<property name="captain" value="true"></property>
+	</bean>
+
+	<bean id="player2" class="com.training.business.Player" scope="prototype">
+		<property name="name" value="Raina"></property>
+		<property name="age" value="31"></property>
+		<property name="runsScored" value="85"></property>
+		<property name="wicketsTaken" value="2"></property>
+		<property name="captain" value="false"></property>
+	</bean>
+
+	<bean id="player3" class="com.training.business.Player" scope="prototype">
+		<property name="name" value="Bravo"></property>
+		<property name="age" value="35"></property>
+		<property name="runsScored" value="75"></property>
+		<property name="wicketsTaken" value="5"></property>
+		<property name="captain" value="false"></property>
+	</bean>
+	<bean id="team1" class="com.training.business.Team">
+		<property name="name" value="CSK"></property>
+		<property name="captianName" value="Dhoni"></property>
+		<property name="players">
+			<list>
+				<ref bean="player1"></ref>
+				<ref bean="player2"></ref>
+				<ref bean="player3"></ref>
+
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="team2" class="com.training.business.Team2">
+		<property name="name" value="CSK"></property>
+		<property name="captianName" value="Dhoni"></property>
+		<property name="players">
+			<list>
+				<ref bean="player1"></ref>
+				<ref bean="player2"></ref>
+				<ref bean="player3"></ref>
+
+			</list>
+		</property>
+	</bean>
+	<bean id="team3" class="com.training.business.Team2">
+		<property name="name" value="CSK"></property>
+		<property name="captianName" value="Dhoni"></property>
+		<property name="players">
+			<set>
+				<ref bean="player1"></ref>
+				<ref bean="player2"></ref>
+				<ref bean="player3"></ref>
+
+			</set>
+		</property>
+	</bean>
+	
+</beans>

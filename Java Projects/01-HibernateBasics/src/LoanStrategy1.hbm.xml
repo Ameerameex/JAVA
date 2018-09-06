@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.training.business">
+	<class name="Loan" table="LOAN1" discriminator-value="L">
+<id name="loanId"></id>
+<discriminator column="LoanType" type="string"></discriminator>
+<property name="customerName"></property>
+<property name="dateOfLoan"></property>
+<property name="amount"></property>
+
+<subclass name="CarLoan" discriminator-value="CL">
+<property name="registrationNo"></property>
+<property name="registrationYear"></property>
+</subclass>
+<subclass name="HomeLoan" discriminator-value="HL">
+<property name="propertyLocation"></property>
+<property name="propertyValue"></property>
+</subclass>
+	</class>
+
+</hibernate-mapping>

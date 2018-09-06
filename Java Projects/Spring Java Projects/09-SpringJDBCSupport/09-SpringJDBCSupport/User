@@ -1,0 +1,2 @@
+
+create table User(id int Auto_increment,userName varchar(25),password varchar(25),status int,userType int,primary key(id));

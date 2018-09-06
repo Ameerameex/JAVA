@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.training.business">
+	<class name="Customer">
+<id name="id" column="c_id">
+<generator class="native"></generator>
+</id>
+<property name="name" column="c_name"></property>
+<property name="dateOfBirth" column="c_dob"></property>
+<property name="gender" column="c_gender"></property>
+<property name="NRICustomer"><column sql-type="BOOLEAN" not-null="true" name="c_isNRI"></column></property>
+<property name="annualIncome" column="c_yearly_income"></property>
+<component name="contactInfo" class="ContactInfo">
+<property name="emailId" column="c_c_email"></property>
+<property name="phoneNumber" column="c_c_phone"></property>
+
+</component>
+
+	</class>
+
+</hibernate-mapping>

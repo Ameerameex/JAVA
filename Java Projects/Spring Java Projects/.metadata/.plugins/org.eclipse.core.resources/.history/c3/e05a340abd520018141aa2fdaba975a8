@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+   
+<bean id="bBean" class="com.training.business.B">
+<constructor-arg value="5000.00"></constructor-arg>
+
+</bean>
+<bean id="cBean" class="com.training.business.C">
+<constructor-arg value="5000" index="1" type="int"></constructor-arg>
+<constructor-arg value="4000" index="2" type="short"></constructor-arg>
+<constructor-arg value="5003" index="0" type="double"></constructor-arg>
+<constructor-arg value="Dhoni" index="3" type="java.lang.String"></constructor-arg>
+</bean>
+<bean id="startYearBean" class="java.lang.Integer">
+<constructor-arg value="2016" ></constructor-arg>
+</bean>
+<bean id="profitBean" class="java.lang.Double">
+<constructor-arg value="12344556.99" ></constructor-arg>
+</bean>
+<bean id="companyNameBean" class="java.lang.String">
+<constructor-arg value="ameex" ></constructor-arg>
+</bean>
+<bean id="task1" class="com.training.business.NumberPrintingTask"></bean>
+<bean id="task2" class="com.training.business.NamePrintingTask"></bean>
+
+<bean id="t1" class="java.lang.Thread">
+<constructor-arg ref="task2"></constructor-arg>
+</bean>
+<bean id="saleBean" class="com.training.business.SaleItem">
+<property name="quantity" value="200"></property>
+<property name="discounts">
+<list>
+<value>20</value>
+<value>12</value>
+<value>14</value>
+<value>13</value>
+<value>11</value>
+
+
+</list>
+</property>
+
+</bean>
+<bean id="filmActorBean" class="com.training.business.FilmActor">
+<property name="actorName" value="Vijay"></property>
+<property name="hitMovies">
+<list>
+<value>Thuppakki</value>
+<value>Theri</value>
+<value>Mersal</value>
+<value>Kaththi</value>
+<value>Thalaiva</value>
+
+
+</list>
+</property>
+
+</bean>
+<bean id="iplVenuesBean" class="com.training.business.IPLVenues">
+<property name="regionName" value="south"></property>
+<property name="venueNames">
+<list>
+<value>Hyderabad</value>
+<value>Chennai</value>
+<value>Bangalore</value>
+
+
+
+</list>
+</property>
+
+</bean>
+<bean id="iplVenuesBean1" class="com.training.business.IPLVenues">
+<property name="regionName" value="north"></property>
+<property name="venueNames">
+<list>
+<value>Mumbai</value>
+<value>Pune</value>
+<value>Delhi</value>
+
+
+
+</list>
+</property>
+
+</bean>
+<bean id="iplTeamBean" class="com.training.business.IPLTeam">
+<property name="teamName" value="CSK"></property>
+<property name="captainName" value="MSD"></property>
+
+<property name="playerNames">
+<set>
+<value>Raina</value>
+<value>Bravo</value>
+<value>Rayudu</value>
+<value>Watson</value>
+<value>Wood</value>
+<value>Ngidi</value>
+<value>Jadhav</value>
+<value>Jadeja</value>
+<value>Bhajji</value>
+<value>Faf</value>
+
+
+
+
+
+
+
+
+
+
+</set>
+</property>
+
+</bean>
+<bean id="iplTournamentBean" class="com.training.business.IPLTournament">
+<property name="year" value="2018"></property>
+<property name="noOfTeams" value="8"></property>
+<property name="officialSponsor" value="vivo"></property>
+<property name="performanceMap">
+<map>
+<entry key="Orange" value="Ambati Rayudu"></entry>
+<entry key="purple" value="Umesh yadav"></entry>
+<entry key="MaximumSixes" value="MSD"></entry>
+
+</map>
+
+</property>
+</bean>
+
+
+
+</beans>

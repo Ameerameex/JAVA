@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+
+
+
+
+#tab1{
+background-image:url("Allimages/Texture/images2.jpg");
+
+margin-left: 4cm;
+height:15cm;
+padding: 1cm 1cm 1cm 1cm;
+
+font-family: verdana;
+border-radius: 6mm;
+
+
+}
+
+
+#head1{
+
+background-color: powderblue;
+
+}
+
+#button{
+	
+	padding:10px;
+	width:18mm;
+	border-radius: 2px;
+	background-color:black;
+	color:white;
+	border-radius:3mm;
+	
+}

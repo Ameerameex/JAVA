@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="com.training.sales.business.Medicine" tableName="MEDICINE">
+<property name="name" type="STRING" columnName="name"></property>
+<property name="stockQty" type="INT" columnName="stockQty"></property>
+<property name="price" type="DOUBLE" columnName="price"></property>
+<property name="expiryDate" type="DATE" columnName="expiryDate"></property>
+
+<idProperty name="batchNo" type="INT" columnName="batchNo"></idProperty>
+</class>

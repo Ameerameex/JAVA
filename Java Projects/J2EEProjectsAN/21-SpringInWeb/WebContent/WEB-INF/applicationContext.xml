@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="circleBean" class="com.training.business.Circle">
+	<property name="radius" value="10"></property>
+	</bean>
+	
+	<bean id="employeeBean" class="com.training.business.Employee">
+	<constructor-arg name="id" value="101"></constructor-arg>
+	<constructor-arg name="name" value="Ameex"></constructor-arg>
+	<constructor-arg name="basic" value="100.00"></constructor-arg>
+	</bean>
+	
+
+</beans>

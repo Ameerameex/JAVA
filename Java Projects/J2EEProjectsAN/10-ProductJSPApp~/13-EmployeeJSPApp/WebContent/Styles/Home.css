@@ -1,0 +1,24 @@
+body{
+	margin-left: 3cm;
+	margin-top: 4cm;
+	
+}
+h1{
+	font-family: TimesNewRoman;
+	font-weight: bolder;
+	font-size: 15pt;
+	text-align: center;
+}
+a{
+	
+	font-family: TimesNewRoman;
+	font-weight: bolder;
+	font-size: 10pt;
+	
+}
+hr{
+	
+	width: 50%;
+	
+	
+}

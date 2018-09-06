@@ -1,0 +1,15 @@
+package com.training.business;
+
+public class EngineProducer {
+
+	public static Engine produceEngine(){
+		
+	return new Engine("defaultModel");
+	}
+	public static Engine produceEngine(String modelName){
+		
+		return new Engine(modelName);
+		}
+	
+	
+}

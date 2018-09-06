@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bustrips>
+	<trip id='T01' operator='KPN Travels'>
+		<from>Chennai</from>
+		<to>Hyderabad</to>
+		<fare type='Adult'>700.00</fare>
+		<fare type="Kid">400.00</fare>
+		<date>2016-05-20</date>
+		<seats>
+			<total>42</total>
+			<passengerCount>
+				<maleCount>20</maleCount>
+				<femaleCount>14</femaleCount>
+			</passengerCount>
+		</seats>
+		<driver>
+			<name>Vikram Rathore</name>
+			<age>28</age>
+		</driver>
+		
+	</trip>
+
+	<trip id='T02' operator='Orange Travels'>
+		<from>Chennai</from>
+		<to>Mumbai</to>
+		<fare type='Adult'>2100.00</fare>
+		<fare type="Kid">1400.00</fare>
+		<date>2016-05-21</date>
+		<seats>
+			<total>36</total>
+			<passengerCount>
+				<maleCount>15</maleCount>
+				<femaleCount>17</femaleCount>
+			</passengerCount>
+		</seats>
+		<driver>
+			<name>Aasif</name>
+			<age>31</age>
+		</driver>
+	</trip>
+	
+</bustrips>

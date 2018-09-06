@@ -1,0 +1,27 @@
+body {
+	margin-left: 2cm;
+	margin-top: 3cm;
+}
+
+h1 {
+	padding: 9px;
+	text-align: center;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: TimesNewRoman;
+	font-weight: bolder;
+	font-size: 10pt;
+}
+
+h2 {
+	padding: 9px;
+	text-align: center;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: TimesNewRoman;
+	font-weight: bold;
+	font-size: 10pt;
+}
+

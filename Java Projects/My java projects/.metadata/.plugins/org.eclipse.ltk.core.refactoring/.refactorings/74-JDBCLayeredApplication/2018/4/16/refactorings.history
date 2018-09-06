@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ameex.training.db.ProductQueries&apos; to &apos;MySQLProductQueries&apos;&#x0D;&#x0A;- Original project: &apos;74-JDBCLayeredApplication&apos;&#x0D;&#x0A;- Original element: &apos;com.ameex.training.db.ProductQueries&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ameex.training.db.MySQLProductQueries&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ProductQueries&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.ameex.training.db{ProductQueries.java[ProductQueries" matchStrategy="1" name="MySQLProductQueries" qualified="false" references="true" similarDeclarations="false" stamp="1524225426303" textual="false" version="1.0"/>
+</session>

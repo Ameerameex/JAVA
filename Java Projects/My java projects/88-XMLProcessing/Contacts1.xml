@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+
+	<contact>
+		<name>
+		Thomas
+		Kurian
+		</name>
+		<phone>9365418816</phone>
+	</contact>
+	
+	<contact>
+		<name>Harry</name>
+		<phone>8815617715</phone>
+	</contact>
+	
+	<contact>
+		<name>Charlie</name>
+		<phone>9641155555</phone>
+	</contact>
+
+
+</contacts>

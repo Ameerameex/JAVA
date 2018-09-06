@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+   
+<bean id="bBean" class="com.training.business.B">
+<constructor-arg value="5000.00"></constructor-arg>
+
+</bean>
+<bean id="cBean" class="com.training.business.C">
+<constructor-arg value="5000" index="1" type="int"></constructor-arg>
+<constructor-arg value="4000" index="2" type="short"></constructor-arg>
+<constructor-arg value="5003" index="0" type="double"></constructor-arg>
+<constructor-arg value="Dhoni" index="3" type="java.lang.String"></constructor-arg>
+
+
+
+</bean>
+<bean id="startYearBean" class="java.lang.Interger">
+<constructor-arg value="2016" ></constructor-arg>
+</bean>
+<bean id="profitBean" class="java.lang.Double">
+<constructor-arg value="12344556.99" ></constructor-arg>
+</bean>
+<bean id="companyNameBean" class="java.lang.String">
+<constructor-arg value="ameex" ></constructor-arg>
+</bean>
+
+</beans>

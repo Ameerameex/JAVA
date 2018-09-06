@@ -1,0 +1,17 @@
+table{
+margin-left: 8cm;
+margin-right: 8cm;
+background-image: url("images4.jpg");
+}
+#title{
+height: 1cm;
+width: 5mm;
+background-color: #89448a;
+font-weight: bolder;
+text-transform: uppercase;
+}
+
+body{
+background-image: url("images27.jpg");
+
+}

@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="customerBean" class="com.training.business.Customer">
+		<property name="name" value="Sharuk"></property>
+
+		<property name="age" value="32"></property>
+		<property name="address">
+		<bean class="com.training.business.Address">
+				<property name="cityName" value="Chennai"></property>
+				<property name="stateName" value="Tamilnadu"></property>
+				<property name="pincode" value="600001"></property>
+		
+		
+		</bean>
+		
+		</property>
+
+	</bean>
+
+</beans>

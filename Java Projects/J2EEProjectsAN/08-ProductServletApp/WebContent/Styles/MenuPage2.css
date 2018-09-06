@@ -1,0 +1,25 @@
+body {
+	margin: 2cm;
+	
+}
+h1{
+	font-family: verdana;
+	font-weight: bolder;;
+	font-size: 10pt;
+	
+}
+table {
+	
+	
+	
+}
+td {
+	background-color:powderblue;
+	padding-left:5mm;
+	padding-right:5mm;
+	font-family: verdana;
+	font-size: 10pt;
+	border: solid thin black;
+	
+	
+}

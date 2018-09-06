@@ -1,0 +1,6 @@
+create table EMP(
+eid int,
+ename varchar(20),
+ebasic double,
+eage int,
+primary key(eid));

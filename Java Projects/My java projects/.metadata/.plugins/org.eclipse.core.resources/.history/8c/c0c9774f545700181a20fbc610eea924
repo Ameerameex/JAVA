@@ -1,0 +1,18 @@
+package com.ameex.training.db;
+
+import java.util.List;
+
+import com.ameex.training.business.ContactInfo;
+
+public interface ContactInfoDAO {
+
+	boolean addContactInfo(ContactInfo ContactInfo) throws Throwable;
+	boolean deleteContactInfo(ContactInfo ContactInfo) throws Throwable;
+	boolean updateContactInfo(ContactInfo ContactInfo) throws Throwable;
+	ContactInfo findContactInfo(int id) throws Throwable;
+	
+	List<ContactInfo> getAllContactInfos() throws Throwable;
+
+	
+	
+}

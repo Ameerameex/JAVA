@@ -1,0 +1,11 @@
+package com.training.business;
+
+public class EngineProducer {
+
+	public static Engine produceEngine(){
+		
+	return new Engine("defaultModel");
+	}
+	
+	
+}

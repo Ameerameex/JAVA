@@ -1,0 +1,5 @@
+create table userInfo(
+username varchar(20),password varchar(20),primary key(username));
+
+insert into userInfo values('ameex','12345');
+insert into userinfo values('ameexusa','abcdef');

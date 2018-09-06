@@ -1,0 +1,118 @@
+package com.ameex.training.db;
+
+import java.net.ConnectException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ameex.training.business.Address;
+
+public class MySQLAddressDAOImpl implements AddressDAO,MySQLAddressQueries {
+
+	@Override
+	public boolean addAddress(Address address) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(INSERT_QUERY);
+		
+		statement.setString(2, address.getDoorNo());
+		statement.setString(3, address.getAreaName());
+		statement.setString(4, address.getCity());
+		statement.setString(5, address.getPincode());
+		statement.setString(6, address.getState());
+		statement.setInt(7, address.getcId());
+
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public boolean deleteAddress(Address address) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(DELETE_QUERY);
+		statement.setInt(1, address.getId());
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public boolean updateAddress(Address address) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(UPDATE_QUERY);
+		statement.setString(1, address.getDoorNo());
+		statement.setString(2, address.getAreaName());
+		statement.setString(3, address.getCity());
+		statement.setString(4, address.getPincode());
+		statement.setString(5, address.getState());
+		statement.setInt(6, address.getcId());
+		statement.setInt(7,address.getId());
+		int r= statement.executeUpdate();
+		ConnectionManager.closeConnection(connection);
+		if(r>0){
+			return true;
+		}
+		else
+		return false;
+	}
+
+	@Override
+	public Address findAddress(int id) throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(FIND_ONE_QUERY);
+		statement.setInt(1,id);
+		ResultSet resultSet=statement.executeQuery();
+
+		if(resultSet.next()){
+			Address address=new Address();
+			address.setId(id);
+			address.setDoorNo(resultSet.getString(2));
+			address.setAreaName(resultSet.getString(3));
+			address.setCity(resultSet.getString(4));
+			address.setPincode(resultSet.getString(5));
+			address.setState(resultSet.getString(6));
+			address.setcId(resultSet.getInt(7));
+
+			return address;
+		}
+		
+		ConnectionManager.closeConnection(connection);
+
+		return null;
+	}
+
+	@Override
+	public List<Address> getAllAddresss() throws Throwable {
+		Connection connection=ConnectionManager.getConnection();
+		PreparedStatement statement=connection.prepareStatement(FIND_ALL_QUERY);
+		List<Address> allAddresss=new ArrayList<>();
+		ResultSet resultSet=statement.executeQuery();
+
+		while(resultSet.next()){
+			Address address=new Address();
+			address.setId(resultSet.getInt(1));
+			address.setDoorNo(resultSet.getString(2));
+			address.setAreaName(resultSet.getString(3));
+			address.setCity(resultSet.getString(4));
+			address.setPincode(resultSet.getString(5));
+			address.setState(resultSet.getString(6));
+			address.setcId(resultSet.getInt(7));
+		}
+		ConnectionManager.closeConnection(connection);
+
+		return allAddresss;
+	}
+
+}

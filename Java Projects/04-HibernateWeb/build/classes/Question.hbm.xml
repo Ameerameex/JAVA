@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.training.business">
+	<class name="Question">
+	
+		<id name="id"><generator class="native"></generator></id>
+			<!-- <generator class="increment" /> -->
+		
+		<property name="questionText"></property>
+		<property name="markWeightage"></property>
+
+
+		<list name="answers" table="Choices" lazy="false">
+			<key column="id"></key>
+			<list-index column="idx"></list-index>
+
+			<composite-element class="Answer">
+				<property name="answerText" column="choices"></property>
+				<property name="answerNumber" column="choiceId"></property>
+			</composite-element>
+
+		</list>
+
+		<component name="correctAnswer" class="Answer">
+			<property name="answerText" column="answer"></property>
+			<property name="answerNumber" column="answerId"></property>
+		</component>
+
+
+	</class>
+</hibernate-mapping>

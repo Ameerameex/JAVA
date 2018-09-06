@@ -1,0 +1,43 @@
+body {
+	margin-left: 2cm;
+	margin-top: 3cm;
+}
+
+h1 {
+	padding: 9px;
+	text-align: center;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: TimesNewRoman;
+	font-weight: bolder;
+	font-size: 10pt;
+}
+
+h2 {
+	padding: 9px;
+	text-align: center;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: TimesNewRoman;
+	font-weight: bold;
+	font-size: 10pt;
+}
+
+td {
+	font-family: TimesNewRoman;
+	font-size: 10pt;
+	height: 10mm;
+	border: solid thin black;
+}
+
+td.dataCell {
+	font-family: TimesNewRoman;
+	font-size: 10pt;
+	height: 10mm;
+	border: solid thin black;
+	background-color: green;
+	color: white;
+	background-color: gray;
+}

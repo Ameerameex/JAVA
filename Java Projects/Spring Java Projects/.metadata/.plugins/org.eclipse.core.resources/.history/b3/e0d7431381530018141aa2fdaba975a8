@@ -1,0 +1,18 @@
+package com.training.ui;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.business.Circle;
+import com.training.business.Player;
+
+public class Main6 {
+
+	public static void main(String[] args) {
+
+		ApplicationContext appletContext = new ClassPathXmlApplicationContext("beans.xml");
+
+		System.out.println(appletContext.getBean("team1"));
+		
+	}
+}

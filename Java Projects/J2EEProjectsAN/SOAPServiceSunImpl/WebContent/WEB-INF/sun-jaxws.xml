@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+  <endpoint
+      name="StudentService"
+      implementation="com.training.service.StudentServiceImpl"
+      url-pattern="/sss"/>
+   <endpoint
+      name="CollegeService"
+      implementation="com.training.service.CollegeServiceImpl"
+      url-pattern="/cs"/>  
+</endpoints>

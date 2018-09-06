@@ -1,0 +1,29 @@
+package com.ameex.training.bean;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Person {
+	
+	private String name;
+	private Date dataOfBirth;
+	public Person(String name, Date dataOfBirth) {
+		super();
+		this.name = name;
+		this.dataOfBirth = dataOfBirth;
+	}
+	
+	public int getDaysCount(){
+		int count=0;
+		Date date=new Date();
+		SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy");
+		
+		int i=Integer.parseInt(dateFormat.format(dataOfBirth));
+		int j=Integer.parseInt(dateFormat.format(date));
+		int k=j-i;
+		int l=k*365;
+		
+		return l;
+	}
+
+}

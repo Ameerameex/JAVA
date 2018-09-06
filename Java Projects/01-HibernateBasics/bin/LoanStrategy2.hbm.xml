@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.training.business">
+	<class name="Loan" table="LOAN2">
+		<id name="loanId"></id>
+		<property name="customerName"></property>
+		<property name="dateOfLoan"></property>
+		<property name="amount"></property>
+
+		<union-subclass name="CarLoan" table="CARLOAN2">
+			<property name="registrationNo"></property>
+			<property name="registrationYear"></property>
+		</union-subclass>
+		<union-subclass name="HomeLoan" table="HOMELOAN2">
+			<property name="propertyLocation"></property>
+			<property name="propertyValue"></property>
+		</union-subclass>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,11 @@
+package com.training.Annotations;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+@Retention(value = RetentionPolicy.RUNTIME)
+public @interface Programmer {
+
+	boolean value();
+	
+}

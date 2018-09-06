@@ -1,0 +1,4 @@
+create table person(
+p_id int ,
+p_name varchar(25),
+p_dob Date,primary key(p_id));

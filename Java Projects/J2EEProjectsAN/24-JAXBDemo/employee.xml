@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee id="101">
+    <name>Dinesh</name>
+    <basic>45000.0</basic>
+    <doj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">28-May-2018</doj>
+    <grade>65</grade>
+    <address>
+        <doorNo>A5</doorNo>
+        <areaName>K K Nagar</areaName>
+        <cityName>Madurai</cityName>
+        <pincode>605110</pincode>
+    </address>
+    <attendanceList>
+        <attendances>
+            <monthName>Jan-2017</monthName>
+            <days>20</days>
+        </attendances>
+        <attendances>
+            <monthName>Feb-2017</monthName>
+            <days>21</days>
+        </attendances>
+        <attendances>
+            <monthName>Mar-2017</monthName>
+            <days>18</days>
+        </attendances>
+    </attendanceList>
+</employee>

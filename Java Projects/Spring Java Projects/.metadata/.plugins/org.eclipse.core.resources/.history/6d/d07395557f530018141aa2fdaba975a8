@@ -1,0 +1,13 @@
+package com.training.business;
+
+public class Player {
+
+	String name;
+	int age;
+	int runsScored,wicketsTaken;
+	boolean captain;
+	
+	
+	
+	
+}

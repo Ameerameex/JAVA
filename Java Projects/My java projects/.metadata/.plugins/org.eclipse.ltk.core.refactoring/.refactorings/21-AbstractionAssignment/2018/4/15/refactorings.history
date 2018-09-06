@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;22-EncapsulationDemo/src&apos;&#x0D;&#x0A;- Original project: &apos;21-AbstractionAssignment&apos;&#x0D;&#x0A;- Destination element: &apos;22-EncapsulationDemo/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     BillItemClient.java&#x0D;&#x0A;     BillItem.java" description="Copy compilation units" destination="=22-EncapsulationDemo/src" element1="/src&lt;{BillItemClient.java" element2="/src&lt;{BillItem.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1523268055370" units="2" version="1.0"/>
+</session>

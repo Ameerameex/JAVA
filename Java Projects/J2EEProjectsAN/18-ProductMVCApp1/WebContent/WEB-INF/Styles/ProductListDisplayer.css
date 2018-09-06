@@ -1,0 +1,47 @@
+body {
+	margin-left: 2cm;
+	margin-top: 3cm;
+}
+
+h1 {
+	text-align: center; height : 1cm;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: verdana;
+	font-size: 12pt;
+	font-weight: bolder;
+	width: 50%;
+	height: 1cm;
+}
+
+h2 {
+	text-align: center;
+	height: 1cm;
+	width: 50%;
+	background-color: black;
+	color: white;
+	font-family: verdana;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+td {
+	height: 12mm;
+	font-family: verdana;
+	font-size: 10pt;
+	border: solid;
+}
+th{
+	height: 12mm;
+	font-family: verdana;
+	font-size: 10pt;
+	border: solid black;
+	background-color:Green;
+	color: white;
+}
+table {
+	border: solid;
+	border-collapse: collapse;;
+}
+

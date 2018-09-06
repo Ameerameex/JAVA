@@ -1,0 +1,24 @@
+package com.training.ui;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.training.business.A;
+import com.training.business.B;
+import com.training.business.C;
+import com.training.business.Employee;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans1.xml");
+C c=(C) context.getBean("cBean");
+
+	System.out.println(c);
+	
+	     Integer integer=(Integer) context.getBean("startYearBean");
+	     System.out.println(integer);
+	}
+
+}

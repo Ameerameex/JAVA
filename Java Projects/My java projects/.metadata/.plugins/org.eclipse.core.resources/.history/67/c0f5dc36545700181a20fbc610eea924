@@ -1,0 +1,18 @@
+package com.ameex.training.db;
+
+import java.util.List;
+
+import com.ameex.training.business.Address;
+
+public interface AddressDAO {
+
+	boolean addAddress(Address Address) throws Throwable;
+	boolean deleteAddress(Address Address) throws Throwable;
+	boolean updateAddress(Address Address) throws Throwable;
+	Address findAddress(int id) throws Throwable;
+	
+	List<Address> getAllAddresss() throws Throwable;
+
+	
+	
+}

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="hospitalBean"
+		class="com.training.assignment.business.Hospital">
+		<property name="doctorNames" >
+		<list>
+				<value>Dr.Ameer</value>
+				<value>Dr.Suriya</value>
+				<value>Dr.Hari</value>
+				<value>Dr.Madhan</value>
+				<value>Dr.balaji</value>
+			</list>
+		
+		
+		
+		</property>
+		<property name="fees" >
+		<list>
+				<value>5</value>
+				<value>500</value>
+				<value>4000</value>
+				<value>300</value>
+				<value>250</value>
+			</list>
+		
+		
+		
+		</property>
+		
+
+	</bean>
+
+</beans>

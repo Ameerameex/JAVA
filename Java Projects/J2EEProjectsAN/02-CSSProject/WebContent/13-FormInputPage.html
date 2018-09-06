@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title>TODO supply a title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<form action="success.html" method="post">
+		<table width="80%" border='1'>
+
+			<tr>
+				<td colspan="2" align="center">Employee Details</td>
+			</tr>
+
+
+			<tr>
+				<td width='20%'>ID</td>
+				<td><input type="text" name="txt.Id" required="required"></td>
+			</tr>
+
+			<tr>
+				<td width='20%'>Name</td>
+				<td><input type="text" name="txt.Name" required="required"
+					title="Minimun 5 chracters..Maximum 20 Charcters">
+			</tr>
+
+			<tr>
+				<td width='20%'></td>
+			</tr>
+
+			<tr>
+				<td width='20%'>Select Your Skills</td>
+				<td><input type="checkbox" value="yes" name="check_C Skill">C/C++
+					<input type="checkbox" value="yes" name="check_J2EE Skill">J2EE
+					<input type="checkbox" value="yes" name="check_Java Skill">Java
+					<input type="checkbox" value="yes" name="check_Oracle Skill">Oracle
+
+				</td>
+			</tr>
+
+			<tr>
+				<td width='20%'>Gender</td>
+				<td colspan="2"><input type="radio" value="1" name="rad_gender"
+					checked="checked">Male <input type="radio" value="2"
+					name="rad_gender">Female</td>
+			</tr>
+
+			<tr>
+
+				<td colspan='2'><br> Description<br> <textarea
+						rows="10" cols="60" name="desc"></textarea></td>
+			</tr>
+
+			<tr>
+
+				<td colspan='2'></td>
+			</tr>
+
+
+
+
+			<tr>
+				<td width='20%'>Select City</td>
+				<td><select name="Combo_City_Name">
+						<option value="0">Select_City</option>
+						<option value="1">Chennai</option>
+                        <option value="2">Bengalore</option>
+                        <option value="3">Hyderabad</option>
+				</select></td>
+			</tr>
+
+
+			<tr>
+				<td width='20%'>Upload Photo</td>
+				<td>
+				<input type="file" name="Photo_File">
+				</td>
+			</tr>
+
+<tr>
+<td align="center"><input type="submit" value="Enter"></td>
+<td align="center"><input type="reset" value="Cancel"></td>
+</tr>
+		</table>
+	</form>
+</body>
+</html>

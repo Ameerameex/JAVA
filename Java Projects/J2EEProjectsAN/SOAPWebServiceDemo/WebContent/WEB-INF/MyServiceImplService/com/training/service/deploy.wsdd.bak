@@ -1,0 +1,76 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MyServiceImplService WSDL service -->
+
+  <service name="MyServiceImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.training.com"/>
+      <parameter name="wsdlServiceElement" value="MyServiceImplService"/>
+      <parameter name="schemaQualified" value="http://service.training.com"/>
+      <parameter name="wsdlServicePort" value="MyServiceImpl"/>
+      <parameter name="className" value="com.training.service.MyServiceImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="MyServiceImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getLoanInterestRate" qname="operNS:getLoanInterestRate" xmlns:operNS="http://service.training.com" returnQName="retNS:getLoanInterestRateReturn" xmlns:retNS="http://service.training.com" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:ch" xmlns:pns="http://service.training.com" type="tns:anyType" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="sayHello" qname="operNS:sayHello" xmlns:operNS="http://service.training.com" returnQName="retNS:sayHelloReturn" xmlns:retNS="http://service.training.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://service.training.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getSum" qname="operNS:getSum" xmlns:operNS="http://service.training.com" returnQName="retNS:getSumReturn" xmlns:retNS="http://service.training.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:x" xmlns:pns="http://service.training.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:y" xmlns:pns="http://service.training.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getLoanInterestRate sayHello getSum"/>
+
+      <typeMapping
+        xmlns:ns="http://service.training.com"
+        qname="ns:>getSumResponse"
+        type="java:com.training.service.GetSumResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.training.com"
+        qname="ns:>getSum"
+        type="java:com.training.service.GetSum"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.training.com"
+        qname="ns:>getLoanInterestRateResponse"
+        type="java:com.training.service.GetLoanInterestRateResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.training.com"
+        qname="ns:>sayHelloResponse"
+        type="java:com.training.service.SayHelloResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://service.training.com"
+        qname="ns:>sayHello"
+        type="java:com.training.service.SayHello"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

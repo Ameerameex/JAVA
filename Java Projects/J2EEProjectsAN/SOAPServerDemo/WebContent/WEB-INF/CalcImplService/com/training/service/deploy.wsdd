@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CalcImplService WSDL service -->
+
+  <service name="CalcImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.training.com"/>
+      <parameter name="wsdlServiceElement" value="CalcImplService"/>
+      <parameter name="schemaQualified" value="http://service.training.com"/>
+      <parameter name="wsdlServicePort" value="CalcImpl"/>
+      <parameter name="className" value="com.training.service.CalcImpl"/>
+      <parameter name="wsdlPortType" value="CalcImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://service.training.com" xmlns:retNS="http://service.training.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="add" qname="operNS:add" returnQName="retNS:addReturn" returnType="rtns:double" soapAction="">
+        <parameter xmlns:pns="http://service.training.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:x" type="tns:int"/>
+        <parameter xmlns:pns="http://service.training.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:y" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="add"/>
+
+  </service>
+</deployment>

@@ -1,0 +1,7 @@
+create table CONTACT(
+EID int,
+EEMAIL VARCHAR(25) NOT NULL,
+EPHONE VARCHAR(10)
+);
+
+

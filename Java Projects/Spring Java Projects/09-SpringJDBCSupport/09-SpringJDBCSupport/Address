@@ -1,0 +1,2 @@
+create table Address(id int Auto_increment,
+doorNo varchar(20),areaName varchar(20),city varchar(20),pincode varchar(10),state varchar(20),cId int,primary key(id),FOREIGN KEY(cId) REFERENCES Customer(id));
